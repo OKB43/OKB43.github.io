@@ -39,7 +39,8 @@ nav ul li a {
 }
 
 main {
-    padding-top: 80px; /* Pour éviter que le contenu soit caché derrière le header fixe */
+    padding-top: 120px; 
+    padding-bottom: 120px; 
 }
 
 section {
