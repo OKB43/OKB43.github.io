@@ -12,8 +12,8 @@
     <h1>Thomas Boussit</h1>
     <nav>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" id="home-link">Accueil</a></li>
+            <li><a href="contact.html" id="contact-link">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -79,6 +79,17 @@
 <footer>
     <p>&copy; 2024 Thomas Boussit</p>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var currentPage = window.location.pathname.split('/').pop();
+        if (currentPage === '' || currentPage === 'index.html') {
+            document.getElementById('home-link').style.display = 'none';
+        } else if (currentPage === 'contact.html') {
+            document.getElementById('contact-link').style.display = 'none';
+        }
+    });
+</script>
 
 </body>
 </html>
