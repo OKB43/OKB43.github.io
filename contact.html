@@ -21,9 +21,15 @@
 <main>
     <section id="contact">
         <h2>Contact</h2>
-        <p><strong>Email :</strong> thomas.boussit@etu.univ-grenoble-alpes.fr</p>
-        <p><strong>LinkedIn :</strong> <a href="#">https://www.linkedin.com/in/thomas-boussit-18660b13b/</a></p>
-        <p><strong>GitHub :</strong> <a href="#">https://github.com/boussitThomas</a></p>
+        <p><strong>Email :</strong> 
+            <a href="mailto:thomas.boussit@etu.univ-grenoble-alpes.fr">thomas.boussit@etu.univ-grenoble-alpes.fr</a>
+        </p>
+        <p><strong>LinkedIn :</strong> 
+            <a href="https://www.linkedin.com/in/thomas-boussit-18660b13b/" target="_blank">Thomas Boussit</a>
+        </p>
+        <p><strong>GitHub :</strong> 
+            <a href="https://github.com/boussitThomas" target="_blank">Thomas Boussit</a>
+        </p>
     </section>
 </main>
 
@@ -34,10 +40,15 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var currentPage = window.location.pathname.split('/').pop();
+        var homeLink = document.getElementById('home-link');
+        var contactLink = document.getElementById('contact-link');
+
         if (currentPage === '' || currentPage === 'index.html' || currentPage === 'thomas.github.io') {
-            document.getElementById('home-link').style.display = 'none';
+            homeLink.style.pointerEvents = 'none';
+            homeLink.style.opacity = '0.5';
         } else if (currentPage === 'contact.html') {
-            document.getElementById('contact-link').style.display = 'none';
+            contactLink.style.pointerEvents = 'none';
+            contactLink.style.opacity = '0.5';
         }
     });
 </script>
