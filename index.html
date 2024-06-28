@@ -21,51 +21,28 @@
 <main>
     <section id="about">
         <h2>À propos de moi</h2>
-        <p>
-            Etudiant en 3e année de BUT informatique, je suis désireux d'acquérir de nouvelles compétences. Je possède de solides acquis et expériences : programmation en C, C++ et Python;
-            Administration des systèmes et réseaux.
-        </p>
+        <p>[Une brève introduction sur toi-même, tes compétences, tes passions et ce qui te motive dans ton travail.]</p>
     </section>
 
     <section id="projects">
         <h2>Projets</h2>
         <div class="project">
-            <h3>GLPI</h3>
-            <p>Mise en place d'un serveur GLPI, sous Windows Server 2022</p>
-            
-        </div>
-        <div class="project">
-            <h3>Game Jam</h3>
-            <p>Realisation d'un jeu video en Python</p>
-            
-        </div>
-        <div class="project">
-            <h3>Infrastructure réseau IUT</h3>
-            <p>Mise en place d'une infrastrucuture d'entreprise avec DNS, Firewall, DHCP, etc.</p>
-            
-        </div>
-        <div class="project">
-            <h3>Wintact</h3>
-            <p>Réalisation d'un outil graphique d'automatisation pour carte électronique</p>
-            
-        </div>
-        <div class="project">
-            <h3>Injecteur de validation</h3>
-            <p>Création d'un injecteur de validation pour IDFM en Python</p>
-            
+            <h3>[COUCOU]</h3>
+            <p>[Une description concise du projet, y compris son objectif et les technologies utilisées.]</p>
+            <a href="#">Lien vers le projet</a>
         </div>
     </section>
 
     <section id="experience">
         <h2>Expérience Professionnelle</h2>
         <div class="job">
-            <h3>Alternant administrateur système et réseau, Centre Technique du Papier</h3>
+            <h3>Administrateur système et réseau, Centre Technique du Papier</h3>
             <p>Administration de l'infrastructure informatique de l'entreprise : serveur, postes utilisateurs, badgeuses, etc</p>
             <p>2023-2024</p>
         </div>
 
         <div class="job">
-            <h3>Stage en entreprise Hardis Group (38)</h3>
+            <h3>Réalisation de macros et d’indicateurs Powerquery pour Excel, Hardis Group (38)</h3>
             <p>Réalisation d’indicateurs de performance à l’aide de tableaux croisés dynamiques et de macros Excel</p>
             <p>2023</p>
         </div>
@@ -85,18 +62,13 @@
 
     <section id="education">
         <h2>Formation</h2>
-        <h3>IUT</h3> 
-        <p>[BUT Informatique, parcours (B) parcours déploiement d'applications communicantes et sécurisées, IUT2 Grenoble, 2022 - 2024]</p>
-        <h3>Prépa</h3> 
-        <p>[ESISAR, classe préparatoire intégrée, Grenoble INP ESISAR, 2019 - 2022]</p>
-        <h3>Lycée</h3> 
-        <p>[Baccalauréat, fillière Scientifique, Lycée Général du Sacré-coeur, 2017 - 2019]</p>
+        <p>[Diplôme, Spécialisation, Institution - Année de Diplôme]</p>
     </section>
 
     <section id="skills">
         <h2>Compétences</h2>
         <ul>
-            <li>Programmation en langage : C, C++, Python3</li>
+            <li>Programmation</li>
             <li>Conception Web</li>
             <li>Gestion de Projet</li>
         </ul>
@@ -110,10 +82,15 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var currentPage = window.location.pathname.split('/').pop();
+        var homeLink = document.getElementById('home-link');
+        var contactLink = document.getElementById('contact-link');
+
         if (currentPage === '' || currentPage === 'index.html' || currentPage === 'thomas.github.io') {
-            document.getElementById('home-link').style.display = 'none';
+            homeLink.style.pointerEvents = 'none';
+            homeLink.style.opacity = '0.5';
         } else if (currentPage === 'contact.html') {
-            document.getElementById('contact-link').style.display = 'none';
+            contactLink.style.pointerEvents = 'none';
+            contactLink.style.opacity = '0.5';
         }
     });
 </script>
