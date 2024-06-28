@@ -34,7 +34,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var currentPage = window.location.pathname.split('/').pop();
-        if (currentPage === '' || currentPage === 'index.html') {
+        if (currentPage === '' || currentPage === 'index.html' || currentPage === 'thomas.github.io') {
             document.getElementById('home-link').style.display = 'none';
         } else if (currentPage === 'contact.html') {
             document.getElementById('contact-link').style.display = 'none';
